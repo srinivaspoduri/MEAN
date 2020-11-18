@@ -13,13 +13,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatInputModule} from "@angular/material/input";
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-import { NgHttpLoaderModule } from 'ng-http-loader';
 import { productsComponent } from './Products.component';
+import { NgHttpLoaderModule } from 'ng-http-loader';
 //https://www.smashingmagazine.com/2018/11/a-complete-guide-to-routing-in-angular/
 //https://therichpost.com/angular-9-material-carousel-slider/
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
     ,productsComponent
   ],
   imports: [

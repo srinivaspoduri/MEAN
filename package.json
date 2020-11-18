@@ -8,7 +8,6 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild": "ng build --prod",
     "node": "12.x",
     "npm": "6.x"
   },
@@ -29,8 +28,6 @@
     "@angular/router": "~11.0.1",
     "@ng-bootstrap/ng-bootstrap": "^8.0.0",
     "@ngbmodule/material-carousel": "^0.7.1",
-    "@ngmodule/material-carousel": "^0.6.0",
-    "angular-in-memory-web-api": "^0.11.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
