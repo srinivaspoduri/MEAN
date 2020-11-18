@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core'
-import { ProductsService } from './services/getProduct.service';
 import {MatTableDataSource } from "@angular/material/table"
 import {TooltipPosition} from '@angular/material/tooltip';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { ProductsService } from 'src/services/getProduct.service';
 @Component({
   selector: 'products',
   templateUrl: './products.component.html',
