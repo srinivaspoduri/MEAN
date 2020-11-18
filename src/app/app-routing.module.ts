@@ -9,7 +9,7 @@ const routs:Routes=[
     {path:'contacts/:id',component:ContactDetailComponent}
 ];
 @NgModule({
-    imports:[RouterModule.forRoot(routs)],
+    imports:[RouterModule.forRoot(routs, { relativeLinkResolution: 'legacy' })],
     exports:[RouterModule]
 })
 export class AppRoutingModule
