@@ -1,0 +1,157 @@
+<!-- <h1> Shopping Cart</h1>
+<button (click)="AllProducts()">All Products</button>
+<button (click)="CategoryProducts('Fashion')">Fashion</button>
+<button (click)="CategoryProducts('HomeApp')">Home Appliances</button>
+<button (click)="CategoryProducts('Mobile')">Mobile</button>
+<style>
+    table {
+        table-layout: fixed !important;
+    }
+
+    thead tr {
+        border: 1px solid black;
+        width: 500px !important;
+        position: fixed !important;
+    }
+
+    tbody tr {
+        border: 1px solid black;
+        width: 500px !important;
+    }
+
+    th,
+    td {
+        border: 1px solid black;
+        width: 100px;
+    }
+</style>
+<div *ngIf="records.length >0">
+    <table>
+
+        <th>
+            <tr>
+                <th>ID</th>
+                <th>CATEGORY</th>
+                <th>SUB</th>
+                <th>BRAND</th>
+                <th>PRICE</th>
+                <th>ITEMCOUNT</th>
+                <th>IMAGE</th>
+            </tr>
+        </th>
+        <tbody>
+            <div *ngFor="let x of records">
+                <tr>
+                    <td>{{x.id}}</td>
+                    <td>{{x.category}}</td>
+                    <td>{{x.subcategory}}</td>
+                    <td>{{x.brand}}</td>
+                    <td>{{x.price}}</td>
+                    <td>{{x.items}}</td>
+                    <td><img src={{x.img}} width="100px" height="50px" /></td>
+                </tr>
+            </div>
+        </tbody>
+    </table>
+
+</div> -->
+    <div>
+        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1QSqfRaBcrwcOxMrM7jNrX7THu0mfBQyITw&usqp=CAU'
+            style="width: 100px;" />
+            <mat-form-field class="example-form-field">
+                <mat-label>Enter product details</mat-label>
+                <input matInput type="text">
+              </mat-form-field>
+    </div>
+    
+
+<div style="margin: 20px">
+    <button mat-raised-button color="primary" (click)="AllProducts()">All Products</button>
+    <button mat-raised-button color="accent" (click)="CategoryProducts('Fashion')">Fashion</button>
+    <button mat-raised-button color="primary" (click)="CategoryProducts('HomeApp')">Home Appliances</button>
+    <button mat-raised-button color="accent" (click)="CategoryProducts('Mobile')">Mobile</button>
+    <button mat-raised-button color="primary" (click)="CategoryProducts('Laptops')">Laptops</button>
+
+</div>
+<style>
+    th {
+        background-color: cadetblue;
+        font-size: medium;
+    }
+
+    button {
+        margin-right: 150px
+    }
+
+    ngb-carousel .wrapper {
+        position: relative;
+        height: 0;
+        padding-top: 25%;
+        /* Keep ratio for 900x500 images */
+    }
+
+    ngb-carousel .wrapper>img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+</style>
+
+<ngb-carousel>
+    <ng-template ngbSlide *ngFor="let x of slides">
+        <div class="wrapper">
+            <img [src]="x" style="width: 100%; height: 50vh" alt="Random first slide">
+        </div>
+    </ng-template>
+</ngb-carousel>
+<div style="margin: 50px" class="mat-elevation-z8">
+    <table style="  width: 100%;" mat-table [dataSource]="dataSource" >
+      
+        <ng-container matColumnDef="ID">
+            <th mat-header-cell *matHeaderCellDef>ID</th>
+            <td mat-cell *matCellDef="let row">{{row.id}}</td>
+
+        </ng-container>
+        <ng-container matColumnDef="CATEGORY">
+            <th mat-header-cell *matHeaderCellDef>CATEGORY</th>
+            <td mat-cell *matCellDef="let row">{{row.category}}</td>
+
+        </ng-container>
+        <ng-container matColumnDef="SUB">
+            <th mat-header-cell *matHeaderCellDef>SUB</th>
+            <td mat-cell *matCellDef="let row">{{row.subcategory}}</td>
+
+        </ng-container>
+        <ng-container matColumnDef="BRAND">
+            <th mat-header-cell *matHeaderCellDef>BRAND</th>
+            <td mat-cell *matCellDef="let row">{{row.brand}}</td>
+
+        </ng-container>
+        <ng-container matColumnDef="PRICE">
+            <th mat-header-cell *matHeaderCellDef>PRICE</th>
+            <td mat-cell *matCellDef="let row">{{row.price}}</td>
+
+        </ng-container>
+        <ng-container matColumnDef="ITEMCOUNT">
+            <th mat-header-cell *matHeaderCellDef>ITEMCOUNT</th>
+            <td mat-cell *matCellDef="let row">{{row.items}}</td>
+
+        </ng-container>
+        <ng-container matColumnDef="IMAGE">
+            <th mat-header-cell *matHeaderCellDef>IMAGE</th>
+            <td mat-cell *matCellDef="let row"><img src={{row.img}} width="100px" height="50px" /></td>
+
+        </ng-container>
+
+        <tr #tooltip="matTooltip" matTooltip="Info about the products" [matTooltipPosition]="positionOptions[0]"
+            matTooltipHideDelay="10000" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row;columns:displayedColumns" #tooltip="matTooltip" matTooltip='ID:{{row|json}}'
+            [matTooltipPosition]="positionOptions[0]"></tr>
+
+
+    </table>
+
+    <ng-http-loader></ng-http-loader>
+</div>
