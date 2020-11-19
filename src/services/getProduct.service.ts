@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs'
+import BASE_URL from 'src/EndPoints/Rest_ends'
+
 
 @Injectable(
     {
@@ -9,14 +11,16 @@ import { Observable } from 'rxjs'
 )
 
 export class ProductsService {
+  
     constructor(public httpservice: HttpClient) { }
     public getallProducts():Observable<any> {
        console.log("in get products")
-        return this.httpservice.get("http://localhost:8080/Allproducts")
+        return this.httpservice.get(BASE_URL+"Allproducts")
     }
     public getCategoryProducts(category):Observable<any> {
         console.log("in fashion products")
-         return this.httpservice.get("http://localhost:8080/products/category/"+category)
+        console.log(BASE_URL)
+         return this.httpservice.get(BASE_URL+"products/category/"+category)
      }
 
 }
