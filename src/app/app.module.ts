@@ -12,9 +12,12 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatInputModule} from "@angular/material/input";
 import { MatIconModule } from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { productsComponent } from './Products.component';
 import { NgHttpLoaderModule } from 'ng-http-loader';
+import {MatDialogModule} from "@angular/material/dialog";
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatRippleModule } from '@angular/material/core';
 //https://www.smashingmagazine.com/2018/11/a-complete-guide-to-routing-in-angular/
 //https://therichpost.com/angular-9-material-carousel-slider/
 @NgModule({
@@ -23,8 +26,8 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
     ,productsComponent
   ],
   imports: [
-    BrowserModule,HttpClientModule, BrowserAnimationsModule,MatTableModule,MatButtonModule,
-    MatTooltipModule,NgbModule,MatInputModule,MatIconModule,FormsModule,NgHttpLoaderModule.forRoot()],
+    MatTableModule,MatButtonModule,
+    MatTooltipModule,NgbModule,MatInputModule,ReactiveFormsModule,MatRippleModule,MatIconModule,FormsModule,MatDialogModule,MatFormFieldModule,BrowserModule,HttpClientModule, BrowserAnimationsModule,NgHttpLoaderModule.forRoot()],
   providers: [ProductsService],
   bootstrap: [productsComponent]
 })

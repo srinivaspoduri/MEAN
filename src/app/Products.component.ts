@@ -3,6 +3,8 @@ import {MatTableDataSource } from "@angular/material/table"
 import {TooltipPosition} from '@angular/material/tooltip';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { ProductsService } from 'src/services/getProduct.service';
+import {MatDialog,MatDialogConfig} from '@angular/material/dialog'
+import { ProductDetailsDialogComponent } from './Dialog/ProductDetailsDialogComponent.component';
 @Component({
   selector: 'products',
   templateUrl: './products.component.html',
@@ -12,14 +14,14 @@ import { ProductsService } from 'src/services/getProduct.service';
 export class productsComponent implements OnInit {
   public records: any;
   public dataSource:MatTableDataSource<any>;
-  public displayedColumns:string[]= ["ID","CATEGORY","SUB","BRAND","PRICE","ITEMCOUNT","IMAGE"];
+  public displayedColumns:string[]= ["ID","CATEGORY","SUB","BRAND","PRICE","ITEMCOUNT","IMAGE","ACTIONS"];
  public  positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
  public slides=  ['https://images-eu.ssl-images-amazon.com/images/G/31/img20/Wireless/WLA/November/Heroes/WithoutBunting/realmebudsclassic/pc-1x._CB415354809_.jpg','https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/BAU/Banners/GW_1500x600-min._CB406905169_.jpg','https://images-eu.ssl-images-amazon.com/images/G/31/img19/AmazonPay/Boson/Sid/CCBP/Nov/BAU/Credit-Card-Bill_1500x600_without._CB415288872_.jpg'
  ,'https://images-eu.ssl-images-amazon.com/images/G/31/prime/Gateway/2020/May/gaming_1500x600._CB431281464_.jpg',
 'https://images-eu.ssl-images-amazon.com/images/G/31/img20/Wireless/SamsungM/17thNov/RV1/Tallhero_1500x600._CB415341732_.jpg',
 'https://images-eu.ssl-images-amazon.com/images/G/31/img20/Luggage/nov/ATF/Unrec/GW_PC_BUNK_luggage1500x600._CB415364628_.jpg']
  ;
-  constructor(public productsservice: ProductsService ,config: NgbCarouselConfig) { 
+  constructor(public productsservice: ProductsService ,config: NgbCarouselConfig,public dialog:MatDialog) { 
     config.interval = 1000;
     config.keyboard = true;
     config.pauseOnHover = true;
@@ -66,6 +68,15 @@ export class productsComponent implements OnInit {
       this.records = errRes;
     
     })
+  }
+  openDialog(datax)
+  {
+
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.data = datax;
+    this.dialog.open(ProductDetailsDialogComponent,dialogConfig)
+
   }
 }
 

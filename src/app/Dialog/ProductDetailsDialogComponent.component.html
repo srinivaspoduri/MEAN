@@ -1,0 +1,30 @@
+<h1 mat-dialog-title style="color: crimson;">{{title}}</h1>
+<div mat-dialog-content>
+    <div>
+        <img src="{{description.img}}" />
+    </div>
+    <div>
+        <span>#itemID: {{description.id}}</span>
+        <br>
+        <span>Brand :{{description.brand}}</span><br>
+        <span>Special Price: {{description.price}}</span><br>
+        <span>description:</span>
+        <p>popular product with high rating to use </p>
+    </div>
+</div>
+<div mat-dialog-actions>
+    <div style="margin: 20px">
+        <button mat-stroked-button color="warn" (click)="dialogclose()">Close</button>
+        <button mat-raised-button color="accent" (click)="dialogclose()">Add to Cart</button>
+    </div>
+</div>
+<style>
+    button {
+        margin-right: 150px
+    }
+    span,p{
+        display: block;
+        font-size: large;
+        box-shadow: inset;
+    }
+</style>
