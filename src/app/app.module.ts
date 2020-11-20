@@ -33,6 +33,6 @@ import { AppRoutingModule } from './Routing/app-routing.module';
     MatFormFieldModule,BrowserModule,HttpClientModule,AppRoutingModule,
      BrowserAnimationsModule,NgHttpLoaderModule.forRoot()],
   providers: [ProductsService],
-  bootstrap: [productsComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
