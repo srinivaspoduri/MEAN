@@ -78,6 +78,28 @@ export class productsComponent implements OnInit {
     this.dialog.open(ProductDetailsDialogComponent,dialogConfig)
 
   }
+  ShowTable()
+  {
+    if (document.getElementById("displaytable").style.display === "none")
+    {
+    document.getElementById("displaytable").style.display="block";
+    document.getElementById("displaygrid").style.display="none";
+    }
+else
+    document.getElementById("displaytable").style.display="none";
+  }
+  displaygrid()
+{
+  
+    if (document.getElementById("displaygrid").style.display === "none")
+    {
+    document.getElementById("displaygrid").style.display="block";
+    document.getElementById("displaytable").style.display="none";
+    }
+else
+    document.getElementById("displaygrid").style.display="none";
+  }
+
 }
 
 

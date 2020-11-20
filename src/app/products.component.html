@@ -57,11 +57,9 @@
 </div> -->
 <div>
     <router-outlet></router-outlet>
-<div>
     <button mat-stroked-button color="warn"><a [routerLink]="'/Home'">Home</a></button>
     <button mat-stroked-button color="warn"><a [routerLink]="'/contacts'">Contacts</a></button>
-</div>
- 
+
     <div>
         <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1QSqfRaBcrwcOxMrM7jNrX7THu0mfBQyITw&usqp=CAU'
             style="width: 100px;" />
@@ -70,17 +68,27 @@
             <input matInput type="text">
         </mat-form-field>
     </div>
-   
+
     <div style="margin: 20px">
         <button mat-raised-button color="primary" (click)="AllProducts()">All Products</button>
         <button mat-raised-button color="accent" (click)="CategoryProducts('Fashion')">Fashion</button>
         <button mat-raised-button color="primary" (click)="CategoryProducts('HomeApp')">Home Appliances</button>
         <button mat-raised-button color="accent" (click)="CategoryProducts('Mobile')">Mobile</button>
         <button mat-raised-button color="primary" (click)="CategoryProducts('Laptops')">Laptops</button>
-
+        <button mat-mini-fab color="primary" (click)="ShowTable()">
+            <mat-icon>table_chart</mat-icon>
+        </button>
+        <button mat-mini-fab color="primary" (click)="displaygrid()">
+            <mat-icon>grid_on</mat-icon>
+        </button>
     </div>
     <style>
-        th {
+        mat-grid-tile ,mat-grid-list{
+            background: lightblue;
+            width: 100%;
+        }
+
+        th{
             background-color: cadetblue;
             font-size: medium;
         }
@@ -112,7 +120,22 @@
             </div>
         </ng-template>
     </ngb-carousel>
-    <div style="margin: 50px" class="mat-elevation-z8">
+    <div id='displaygrid' style="display: none;">
+        <mat-grid-list cols ="4"rowHeight="2:1" *ngFor="let x of records">
+            <mat-list-item><img src="{{x.img}}" /></mat-list-item>
+            <mat-list-item>
+                <pre>category: {{ x.category }}</pre>
+                <pre>subcategory: {{ x.subcategory }}</pre>
+                <pre>Brand: {{ x.brand }}</pre>
+                <pre>price: {{ x.price }}</pre>
+                <pre>Items: {{ x.items }}</pre>
+                <pre>Product ID #: {{ x.id }}</pre>
+                <pre><button mat-raised-button color="primary"
+                    (click)="openDialog(x)">View Details</button></pre>
+            </mat-list-item>
+                 </mat-grid-list>
+    </div>
+    <div style="margin: 100px" class="mat-elevation-z8" style="display: block;" id="displaytable">
         <table style="  width: 100%;" mat-table [dataSource]="dataSource">
 
             <ng-container matColumnDef="ID">
