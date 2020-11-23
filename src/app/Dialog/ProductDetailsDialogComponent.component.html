@@ -1,30 +1,49 @@
-<h1 mat-dialog-title style="color: crimson;">{{title}}</h1>
-<div mat-dialog-content>
-    <div>
-        <img src="{{description.img}}" />
+<div style="text-align: center;">
+    <h1 mat-dialog-title style="color:midnightblue">{{title}}</h1>
+    <div mat-dialog-content>
+        <div>
+            <img class="zoom" src="{{description.img}}" />
+        </div>
+        <ul style="list-style-type:none;">
+            <li><b>Product ID #</b>: {{ description.id }}</li>
+            <li><b>Category</b>: {{ description.category }}</li>
+            <li><b>Subcategory</b>: {{ description.subcategory }}</li>
+            <li><b>Brand</b>: {{ description.brand }}</li>
+            <li><b>Price</b>: {{ description.price }}</li>
+            <li><b>Items</b>: {{ description.items }}</li>
+
+        </ul>
     </div>
-    <div>
-        <span>#itemID: {{description.id}}</span>
-        <br>
-        <span>Brand :{{description.brand}}</span><br>
-        <span>Special Price: {{description.price}}</span><br>
-        <span>description:</span>
-        <p>popular product with high rating to use </p>
-    </div>
-</div>
-<div mat-dialog-actions>
-    <div style="margin: 20px">
-        <button mat-stroked-button color="warn" (click)="dialogclose()">Close</button>
-        <button mat-raised-button color="accent" (click)="dialogclose()">Add to Cart</button>
+    <div mat-dialog-actions>
+        <div style="margin: 20px">
+            <button mat-button color="warn" (click)="dialogclose()">Close</button>
+            <button mat-button color="accent" (click)="dialogclose()">Add to Cart</button>
+        </div>
     </div>
 </div>
 <style>
     button {
         margin-right: 150px
     }
-    span,p{
+
+    span,
+    p {
         display: block;
         font-size: large;
         box-shadow: inset;
     }
+    .zoom:hover {
+        transform: scale(1.75);
+        /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+    b{
+        color:navy
+    }
+    li
+    {
+        color:purple;
+       
+    }
+    
+   
 </style>
