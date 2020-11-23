@@ -71,8 +71,8 @@
     </div>
     <style>
         mat-grid-tile ,mat-grid-list{
-            background: lightblue;
-            width: 100%;
+            
+            width: 50%;
         }
 
         th{
@@ -108,18 +108,20 @@
         </ng-template>
     </ngb-carousel>
     <div id='displaygrid' style="display: none;">
-        <mat-grid-list cols ="2"rowHeight="2:1" *ngFor="let x of records">
-            <mat-list-item><img src="{{x.img}}" /></mat-list-item>
-            <mat-list-item>
-                <pre>category: {{ x.category }}</pre>
-                <pre>subcategory: {{ x.subcategory }}</pre>
-                <pre>Brand: {{ x.brand }}</pre>
-                <pre>price: {{ x.price }}</pre>
-                <pre>Items: {{ x.items }}</pre>
-                <pre>Product ID #: {{ x.id }}</pre>
-                <pre><button mat-raised-button color="primary"
-                    (click)="openDialog(x)">View Details</button></pre>
-            </mat-list-item>
+        <mat-grid-list cols ="2"rowHeight="35vh" *ngFor="let x of records">
+            <mat-grid-tile><img src="{{x.img}}" /></mat-grid-tile>
+            <mat-grid-tile>
+                <ul style="list-style-type:none;">
+                <li><b>category</b>: {{ x.category }}</li>
+                <li><b>subcategory</b>: {{ x.subcategory }}</li>
+                <li><b>rand</b>: {{ x.brand }}</li>
+                <li><b>price</b>: {{ x.price }}</li>
+                <li><b>Items</b>: {{ x.items }}</li>
+                <li><b>Product ID #</b>: {{ x.id }}</li>
+                <li><button mat-raised-button color="primary"
+                    (click)="openDialog(x)">View Details</button></li>
+             </ul>       
+            </mat-grid-tile>
                  </mat-grid-list>
     </div>
     <div style="margin: 100px" class="mat-elevation-z8" style="display: block;" id="displaytable">
