@@ -1,0 +1,27 @@
+ng update @angular/core @angular/cli
+https://itnext.io/how-to-deploy-angular-application-to-heroku-1d56e09c5147
+https://www.freecodecamp.org/news/how-to-deploy-a-nodejs-app-to-heroku-from-github-without-installing-heroku-on-your-machine-433bec770efe/
+mongodb+srv://admin:admin@mycluster.sup8t.mongodb.net/MyDB?retryWrites=true&w=majority
+https://stackabuse.com/serving-static-files-with-node-and-express-js/
+https://stackoverflow.com/questions/42701857/angular-cli-not-generating-dist-directory-with-ng-build?noredirect=1&lq=1
+https://medium.com/@shubhsharma10/how-to-deploy-angular-6-app-to-heroku-52b73ac7a3aa
+
+<ng-http-loader></ng-http-loader>
+
+Node server depoyment:https://www.sitepoint.com/deploy-rest-api-in-30-mins-mlab-heroku/
+	need to add script to start server in package.json
+	 "scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js"
+	  },
+	 should have node modules folder in side the server folder(we get by npm install)
+	need to provide both package.json and package.lock.json files in git
+	need to assign port app.listen(process.env.PORT || 8080); 
+	
+	
+https://blog.angular-university.io/angular-material-dialog/
+https://stackoverflow.com/questions/36884483/how-to-get-all-values-of-a-javascript-object-by-its-keys
+https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/
+
+Input-Output
+https://ultimatecourses.com/blog/bootstrap-angular-2-hello-world
