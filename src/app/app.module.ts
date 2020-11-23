@@ -20,12 +20,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRippleModule } from '@angular/material/core';
 import { AppRoutingModule } from './Routing/app-routing.module';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 //https://www.smashingmagazine.com/2018/11/a-complete-guide-to-routing-in-angular/
 //https://therichpost.com/angular-9-material-carousel-slider/
 @NgModule({
   declarations: [
     AppComponent
-    ,productsComponent
+    ,productsComponent, HeaderComponent, FooterComponent
   ],
   imports: [
     MatTableModule,MatButtonModule,
