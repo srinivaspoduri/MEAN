@@ -22,12 +22,14 @@ import { AppRoutingModule } from './Routing/app-routing.module';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { CartComponent } from './cart/cart.component';
+import { AccountComponent } from './account/account.component';
 //https://www.smashingmagazine.com/2018/11/a-complete-guide-to-routing-in-angular/
 //https://therichpost.com/angular-9-material-carousel-slider/
 @NgModule({
   declarations: [
     AppComponent
-    ,productsComponent, HeaderComponent, FooterComponent
+    ,productsComponent, HeaderComponent, FooterComponent, CartComponent, AccountComponent
   ],
   imports: [
     MatTableModule,MatButtonModule,
