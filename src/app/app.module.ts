@@ -26,6 +26,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CartComponent } from './cart/cart.component';
 import { AccountComponent } from './account/account.component';
 import { HomeComponent } from './home/home.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 //https://www.smashingmagazine.com/2018/11/a-complete-guide-to-routing-in-angular/
 //https://therichpost.com/angular-9-material-carousel-slider/
 @NgModule({
@@ -34,7 +35,7 @@ import { HomeComponent } from './home/home.component';
     ,productsComponent, HeaderComponent, FooterComponent, CartComponent, AccountComponent, HomeComponent
   ],
   imports: [
-    MatTableModule,MatButtonModule,
+    MatTableModule,MatButtonModule,MatToolbarModule,
     MatTooltipModule,NgbModule,MatInputModule,ReactiveFormsModule,
     MatRippleModule,MatIconModule,FormsModule,MatDialogModule,MatGridListModule,MatCardModule,
     MatFormFieldModule,BrowserModule,HttpClientModule,AppRoutingModule,

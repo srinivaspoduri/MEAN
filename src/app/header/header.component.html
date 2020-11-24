@@ -1,17 +1,35 @@
-<div>
-    <button mat-button color="warn"><mat-icon>home</mat-icon><a [routerLink]="'/Home'">Home</a></button>
-    <button mat-button color="warn"><mat-icon>list</mat-icon><a [routerLink]="'/products'">Products</a></button>
-    <button mat-button color="warn"><mat-icon>contacts</mat-icon><a [routerLink]="'/contacts'">Contacts</a></button>
-    <button  mat-button color="warn" style="float: right;"><mat-icon>account_box</mat-icon><a [routerLink]="'/account'">Account</a></button>
-    <button  mat-button color="warn" style="float: right;"><mat-icon>add_shopping_cart</mat-icon><a [routerLink]="'/cart'">Cart</a></button>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-button color="warn"><mat-icon>home</mat-icon><a [routerLink]="'/Home'">Home</a></button>
+        <span style="flex: 1 1 auto;"></span>
+        <button  mat-button color="warn"><mat-icon>account_box</mat-icon><a [routerLink]="'/account'">Account</a></button>
+        <button  mat-button color="warn"><mat-icon>add_shopping_cart</mat-icon><a [routerLink]="'/cart'">Cart</a></button>
+        
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-toolbar color="Accent">
+       <button mat-button color="warn"><mat-icon>list</mat-icon><a [routerLink]="'/products'">Products</a></button>
+        <button mat-button color="warn"><mat-icon>contacts</mat-icon><a [routerLink]="'/contacts'">Contacts</a></button> 
+</mat-toolbar>
+  
+    <!-- <mat-toolbar-row color="warn">
+      <span>Second Line</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+    </mat-toolbar-row> -->
+  
 
-
-    <div>
-        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1QSqfRaBcrwcOxMrM7jNrX7THu0mfBQyITw&usqp=CAU'
-            style="width: 100px;" />
-        <mat-form-field class="example-form-field">
-            <mat-label>Enter product details</mat-label>
-            <input matInput type="text">
-        </mat-form-field>
-    </div>
+    <!-- <div> -->
+        
+        
+    
+    
+        <!-- <div>
+            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1QSqfRaBcrwcOxMrM7jNrX7THu0mfBQyITw&usqp=CAU'
+                style="width: 100px;" />
+            <mat-form-field class="example-form-field">
+                <mat-label>Enter product details</mat-label>
+                <input matInput type="text">
+            </mat-form-field>
+        </div> -->
    
