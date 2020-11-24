@@ -1,0 +1,31 @@
+<p>home works!</p>
+<div style="margin: 10px">
+    <mat-card>
+        <mat-grid-list cols="4" rowHeight="2:1">
+            <mat-grid-tile><img src="{{showinGrid[0].img}}" /></mat-grid-tile>
+            <mat-grid-tile><img src="{{showinGrid[1].img}}" /></mat-grid-tile>
+            <mat-grid-tile><img src="{{showinGrid[2].img}}" /></mat-grid-tile>
+            <mat-grid-tile><img src="{{showinGrid[3].img}}" /></mat-grid-tile>
+            <mat-grid-tile><img src="{{showinGrid[4].img}}" /></mat-grid-tile>
+            <mat-grid-tile><img src="{{showinGrid[5].img}}" /></mat-grid-tile>
+            <mat-grid-tile><img src="{{showinGrid[6].img}}" /></mat-grid-tile>
+            <mat-grid-tile><img src="{{showinGrid[7].img}}" /></mat-grid-tile> 
+                             
+        </mat-grid-list>
+        <button mat-button color="warn" style="float: right;"><a [routerLink]="'/products'">View More...</a></button>
+    </mat-card>
+</div>
+<style>
+    .mat-grid-tile {
+    border: solid 2px navy;
+    width:"25px" ;
+    height:"25px"
+    
+}
+img
+{
+    max-height: 200%;
+    height: 75%;
+    max-width: none;
+}
+</style>

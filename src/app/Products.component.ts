@@ -41,6 +41,7 @@ export class productsComponent implements OnInit {
       this.records = errRes;
     })
     */
+   
   }
   CategoryProducts(category): void {
 
