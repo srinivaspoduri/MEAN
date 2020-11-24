@@ -11,7 +11,8 @@ const routes: Routes = [
     ,{path:"products",component:productsComponent},
     {path:"cart",component:CartComponent},
     {path:"account",component:AccountComponent},
-    {path: '' , component: HomeComponent}
+    {path: '' , component: HomeComponent},
+    {path: 'Home' , component: HomeComponent}
     ];//{path: '' , component: HomeComponent}
 
 @NgModule({
