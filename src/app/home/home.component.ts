@@ -46,8 +46,8 @@ export class HomeComponent implements OnInit {
       for(let i=0;i<4;i++)
       {
         let value = Math.floor(Math.random()*(lengths-1-0) +0);
-        console.log("show in Grid value "+value + " element "+this.records[value])
-      this.showinGrid.push(this.records[value])
+        console.log("show in Grid value "+value + " element "+this.records[value].img)
+      this.showinGrid.push(this.records[value].img)
     }
     console.log("show in Grid"+this.showinGrid)
     }, (errRes) => {
@@ -64,8 +64,8 @@ export class HomeComponent implements OnInit {
       for(let i=0;i<4;i++)
       {
         let value = Math.floor(Math.random()*(lengths-1-0) +0);
-        console.log("show in Grid value "+value + " element "+this.records[value])
-      this.showinGrid.push(this.records[value])
+        console.log("show in Grid value "+value + " element "+this.records[value].img)
+      this.showinGrid.push(this.records[value].img)
     }
     console.log("show in Grid"+this.showinGrid)
     }, (errRes) => {
@@ -82,8 +82,8 @@ export class HomeComponent implements OnInit {
       for(let i=0;i<4;i++)
       {
         let value = Math.floor(Math.random()*(lengths-1-0) +0);
-        console.log("show in Grid value "+value + " element "+this.records[value])
-      this.showinGrid.push(this.records[value])
+        console.log("show in Grid value "+value + " element "+this.records[value].img)
+      this.showinGrid.push(this.records[value].img)
     }
     console.log("show in Grid"+this.showinGrid)
     }, (errRes) => {
@@ -100,8 +100,8 @@ export class HomeComponent implements OnInit {
       for(let i=0;i<4;i++)
       {
         let value = Math.floor(Math.random()*(lengths-1-0) +0);
-        console.log("show in Grid value "+value + " element "+this.records[value])
-      this.showinGrid.push(this.records[value])
+        console.log("show in Grid value "+value + " element "+this.records[value].img)
+      this.showinGrid.push(this.records[value].img)
     }
     console.log("show in Grid"+this.showinGrid)
     }, (errRes) => {
