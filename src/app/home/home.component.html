@@ -1,31 +1,84 @@
-<p>home works!</p>
-<div style="margin: 10px">
-    <mat-card>
-        <mat-grid-list cols="4" rowHeight="2:1">
-            <mat-grid-tile><img src="{{showinGrid[0].img}}" /></mat-grid-tile>
-            <mat-grid-tile><img src="{{showinGrid[1].img}}" /></mat-grid-tile>
-            <mat-grid-tile><img src="{{showinGrid[2].img}}" /></mat-grid-tile>
-            <mat-grid-tile><img src="{{showinGrid[3].img}}" /></mat-grid-tile>
-            <mat-grid-tile><img src="{{showinGrid[4].img}}" /></mat-grid-tile>
-            <mat-grid-tile><img src="{{showinGrid[5].img}}" /></mat-grid-tile>
-            <mat-grid-tile><img src="{{showinGrid[6].img}}" /></mat-grid-tile>
-            <mat-grid-tile><img src="{{showinGrid[7].img}}" /></mat-grid-tile> 
-                             
-        </mat-grid-list>
-        <button mat-button color="warn" style="float: right;"><a [routerLink]="'/products'">View More...</a></button>
-    </mat-card>
+<ngb-carousel>
+    <ng-template ngbSlide *ngFor="let x of slides">
+        <div class="wrapper">
+            <img [src]="x" style="width: 100%; height: 50vh" alt="Random first slide">
+        </div>
+    </ng-template>
+</ngb-carousel>
+<div fxLayout="row" style="display:flex; flex-direction: row;  padding: 16px;"> 
+    <div>
+        <mat-card style=" width: 300px;">
+            <h1>Top picks for your home</h1>
+            <mat-grid-list cols="2">
+                <mat-grid-tile><img src="{{showinGrid[0].img}}" /></mat-grid-tile>
+                <mat-grid-tile><img src="{{showinGrid[1].img}}" /></mat-grid-tile>
+                <mat-grid-tile><img src="{{showinGrid[2].img}}" /></mat-grid-tile>
+                <mat-grid-tile><img src="{{showinGrid[3].img}}" /></mat-grid-tile>
+                
+            </mat-grid-list>
+            <button mat-button color="warn" style="float: right;"><a [routerLink]="'/products'">View
+                    More...</a></button>
+        </mat-card>
+    </div>
+
+    <div>
+        <mat-card style=" width: 300px;">
+            <h1>Top picks from Fashion</h1>
+            <mat-grid-list cols="2">
+                <mat-grid-tile><img src="{{showinGrid[4].img}}" /></mat-grid-tile>
+                <mat-grid-tile><img src="{{showinGrid[5].img}}" /></mat-grid-tile>
+                <mat-grid-tile><img src="{{showinGrid[6].img}}" /></mat-grid-tile>
+                <mat-grid-tile><img src="{{showinGrid[7].img}}" /></mat-grid-tile>
+
+            </mat-grid-list>
+            <button mat-button color="warn" style="float: right;"><a [routerLink]="'/products'">View
+                    More...</a></button>
+        </mat-card>
+    </div>
+
+    <div>
+        <mat-card style=" width: 300px;">
+            <h1>Top picks from Mobile</h1>
+            <mat-grid-list cols="2">
+                <mat-grid-tile><img src="{{showinGrid[8].img}}" /></mat-grid-tile>
+                <mat-grid-tile><img src="{{showinGrid[9].img}}" /></mat-grid-tile>
+                <mat-grid-tile><img src="{{showinGrid[10].img}}" /></mat-grid-tile>
+                <mat-grid-tile><img src="{{showinGrid[11].img}}" /></mat-grid-tile>
+
+            </mat-grid-list>
+            <button mat-button color="warn" style="float: right;"><a [routerLink]="'/products'">View
+                    More...</a></button>
+        </mat-card>
+    </div>
+
+    <div>
+        <mat-card style=" width: 300px;">
+            <h1>Top picks from Laptops</h1>
+            <mat-grid-list cols="2">
+                <mat-grid-tile><img src="{{showinGrid[12].img}}" /></mat-grid-tile>
+                <mat-grid-tile><img src="{{showinGrid[13].img}}" /></mat-grid-tile>
+                <mat-grid-tile><img src="{{showinGrid[14].img}}" /></mat-grid-tile>
+                <mat-grid-tile><img src="{{showinGrid[15].img}}" /></mat-grid-tile>
+
+            </mat-grid-list>
+            <button mat-button color="warn" style="float: right;"><a [routerLink]="'/products'">View
+                    More...</a></button>
+        </mat-card>
+    </div>
 </div>
 <style>
     .mat-grid-tile {
-    border: solid 2px navy;
-    width:"25px" ;
-    height:"25px"
-    
-}
-img
-{
-    max-height: 200%;
-    height: 75%;
-    max-width: none;
-}
+        border:   5px;
+        border-style: ridge;
+        width: "25px";
+        height: "25px";
+        border-color: rgb(248, 243, 243);
+
+    }
+
+    img {
+        max-height: 200%;
+        height: 75%;
+        max-width: none;
+    }
 </style>

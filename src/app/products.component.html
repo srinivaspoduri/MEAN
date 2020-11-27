@@ -101,13 +101,7 @@
     }
 </style>
 
-<ngb-carousel>
-    <ng-template ngbSlide *ngFor="let x of slides">
-        <div class="wrapper">
-            <img [src]="x" style="width: 100%; height: 50vh" alt="Random first slide">
-        </div>
-    </ng-template>
-</ngb-carousel>
+
 <div id='displaygrid' style="display: none; ">
     <mat-grid-list cols="2" rowHeight="35vh" *ngFor="let x of records">
         <mat-grid-tile><img src="{{x.img}}" /></mat-grid-tile>
