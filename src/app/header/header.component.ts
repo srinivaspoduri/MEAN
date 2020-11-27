@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  public searchText="";
+  constructor(public route:Router) { }
 
   ngOnInit(): void {
+  }
+  search(searchItem:any){
+    console.log(searchItem);
+    this.route.navigate(['/searchproducts'],{ queryParams: { catagory: `${searchItem}`} });
+
   }
 
 }

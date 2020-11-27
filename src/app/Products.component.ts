@@ -69,6 +69,7 @@ export class productsComponent implements OnInit {
       this.records = errRes;
     
     })
+    return this.records;
   }
   openDialog(datax)
   {

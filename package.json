@@ -29,6 +29,7 @@
     "@ng-bootstrap/ng-bootstrap": "^8.0.0",
     "@ngbmodule/material-carousel": "^0.7.1",
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongodb": "^3.6.3",

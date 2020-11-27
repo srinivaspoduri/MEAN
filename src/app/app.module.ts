@@ -27,12 +27,13 @@ import { CartComponent } from './cart/cart.component';
 import { AccountComponent } from './account/account.component';
 import { HomeComponent } from './home/home.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { SearchedProductsComponent } from './searched-products/searched-products.component';
 //https://www.smashingmagazine.com/2018/11/a-complete-guide-to-routing-in-angular/
 //https://therichpost.com/angular-9-material-carousel-slider/
 @NgModule({
   declarations: [
     AppComponent
-    ,productsComponent, HeaderComponent, FooterComponent, CartComponent, AccountComponent, HomeComponent
+    ,productsComponent, HeaderComponent, FooterComponent, CartComponent, AccountComponent, HomeComponent,SearchedProductsComponent
   ],
   imports: [
     MatTableModule,MatButtonModule,MatToolbarModule,
