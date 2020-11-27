@@ -16,11 +16,7 @@ export class productsComponent implements OnInit {
   public dataSource:MatTableDataSource<any>;
   public displayedColumns:string[]= ["ID","CATEGORY","SUB","BRAND","PRICE","ITEMCOUNT","IMAGE","ACTIONS"];
  public  positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
- public slides=  ['https://images-eu.ssl-images-amazon.com/images/G/31/img20/Wireless/WLA/November/Heroes/WithoutBunting/realmebudsclassic/pc-1x._CB415354809_.jpg','https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/BAU/Banners/GW_1500x600-min._CB406905169_.jpg','https://images-eu.ssl-images-amazon.com/images/G/31/img19/AmazonPay/Boson/Sid/CCBP/Nov/BAU/Credit-Card-Bill_1500x600_without._CB415288872_.jpg'
- ,'https://images-eu.ssl-images-amazon.com/images/G/31/prime/Gateway/2020/May/gaming_1500x600._CB431281464_.jpg',
-'https://images-eu.ssl-images-amazon.com/images/G/31/img20/Wireless/SamsungM/17thNov/RV1/Tallhero_1500x600._CB415341732_.jpg',
-'https://images-eu.ssl-images-amazon.com/images/G/31/img20/Luggage/nov/ATF/Unrec/GW_PC_BUNK_luggage1500x600._CB415364628_.jpg']
- ;
+
   constructor(public productsservice: ProductsService ,config: NgbCarouselConfig,public dialog:MatDialog) { 
     config.interval = 1000;
     config.keyboard = true;
@@ -32,7 +28,7 @@ export class productsComponent implements OnInit {
   
 
     //subscribing the observable as getEmployees is observable
-   /* this.productsservice.getallProducts().subscribe((posRes) => {
+   this.productsservice.getallProducts().subscribe((posRes) => {
 
       console.log("pos resonse received " + posRes)
       this.records = posRes.products;
@@ -40,7 +36,7 @@ export class productsComponent implements OnInit {
       console.log("err resonse received " + errRes.body)
       this.records = errRes;
     })
-    */
+    
    
   }
   CategoryProducts(category): void {
