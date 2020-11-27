@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {productsComponent} from '../Products.component';
+
 
 @Component({
   selector: 'app-searched-products',
@@ -11,8 +11,8 @@ export class SearchedProductsComponent implements OnInit {
 
   public catagory:any;
   public allProducts:any[];
-  constructor(private route: ActivatedRoute,
-    public products:productsComponent) { }
+  constructor(private route: ActivatedRoute)
+     { }
 
   ngOnInit():void {
     this.route.queryParams.subscribe((searchItem)=>{
