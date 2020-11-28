@@ -115,7 +115,7 @@ export class HomeComponent implements OnInit {
   LoadSubCategory(showinGrid:any)
   {
   //  console.log(searchItem);
-    this.route.navigate(['/subproducts'],{ queryParams: { catagory: `${showinGrid}`} });
+    this.route.navigate(['/subproducts/'],{ queryParams: { catagory: `${showinGrid}`} });
 
   }
 

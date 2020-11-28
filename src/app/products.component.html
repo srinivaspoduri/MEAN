@@ -55,20 +55,6 @@
     </table>
 
 </div> -->
-
-<div style="margin: 20px">
-    <button mat-raised-button color="primary" (click)="AllProducts()">All Products</button>
-    <button mat-raised-button color="accent" (click)="CategoryProducts('Fashion')">Fashion</button>
-    <button mat-raised-button color="primary" (click)="CategoryProducts('HomeApp')">Home Appliances</button>
-    <button mat-raised-button color="accent" (click)="CategoryProducts('Mobile')">Mobile</button>
-    <button mat-raised-button color="primary" (click)="CategoryProducts('Laptops')">Laptops</button>
-    <button mat-mini-fab color="primary" (click)="ShowTable()">
-        <mat-icon>table_chart</mat-icon>
-    </button>
-    <button mat-mini-fab color="primary" (click)="displaygrid()">
-        <mat-icon>grid_on</mat-icon>
-    </button>
-</div>
 <style>
     mat-grid-tile,
     mat-grid-list {
@@ -102,7 +88,7 @@
 </style>
 
 
-<div id='displaygrid' style="display: none; ">
+<div id='displaygrid' style="display: block; ">
     <mat-grid-list cols="2" rowHeight="35vh" *ngFor="let x of records">
         <mat-grid-tile><img src="{{x.img}}" /></mat-grid-tile>
         <mat-grid-tile>
@@ -119,7 +105,7 @@
     </mat-grid-list>
 </div>
 <div>
-<div style="margin: 100px" class="mat-elevation-z8" style="display: block;" id="displaytable">
+<div style="margin: 100px" class="mat-elevation-z8" style="display: none;" id="displaytable">
     <table style="  width: 100%;" mat-table [dataSource]="dataSource">
 
         <ng-container matColumnDef="ID" >
@@ -177,3 +163,22 @@
 
 
 </div>
+
+<style>
+
+.mat-grid-tile {
+        border: 5px;
+        width: "25px";
+        height: "25px";
+        border-color: rgb(248, 243, 243);
+
+    }
+    img {
+        max-height: 200%;
+        height: 75%;
+        max-width: none;
+    }
+    div, mat-grid-list{
+        align-content: center;
+    }
+</style>

@@ -11,10 +11,25 @@
         
     </mat-toolbar-row>
 </mat-toolbar>
-<mat-toolbar color="Accent">
-       <button mat-button color="warn"><mat-icon>list</mat-icon><a [routerLink]="'/products'">Products</a></button>
-        <button mat-button color="warn"><mat-icon>contacts</mat-icon><a [routerLink]="'/contacts'">Contacts</a></button> 
-</mat-toolbar>
+<div style="margin: 20px ;background-color: black;">
+    <button mat-button color="accent" (click)="CategoryProducts('Fashion')">Fashion</button>
+    <button mat-button color="primary" (click)="CategoryProducts('HomeApp')">Home Appliances</button>
+    <button mat-button color="accent" (click)="CategoryProducts('Mobile')">Mobile</button>
+    <button mat-button color="primary" (click)="CategoryProducts('Laptops')">Laptops</button>
+    <button mat-button color="accent" (click)="CategoryProducts('Jewellery')">Jewellery</button>
+    <button mat-mini-fab color="primary" (click)="ShowTable()">
+        <mat-icon>table_chart</mat-icon>
+    </button>
+    <button mat-mini-fab color="primary" (click)="displaygrid()">
+        <mat-icon>grid_on</mat-icon>
+    </button>
+</div>
+
+<style>
+     button {
+        margin-right: 50px
+    }
+</style>
   
     <!-- <mat-toolbar-row color="warn">
       <span>Second Line</span>
