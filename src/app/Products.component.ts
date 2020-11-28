@@ -29,14 +29,14 @@ export class productsComponent implements OnInit {
   
 
     //subscribing the observable as getEmployees is observable
-   this.productsservice.getallProducts().subscribe((posRes) => {
+  //  this.productsservice.getallProducts().subscribe((posRes) => {
 
-      console.log("pos resonse received " + posRes)
-      this.records = posRes.products;
-    }, (errRes) => {
-      console.log("err resonse received " + errRes.body)
-      this.records = errRes;
-    })
+  //     console.log("pos resonse received " + posRes)
+  //     this.records = posRes.products;
+  //   }, (errRes) => {
+  //     console.log("err resonse received " + errRes.body)
+  //     this.records = errRes;
+  //   })
 ////
 
 this.route.queryParams.subscribe((searchItem)=>{
