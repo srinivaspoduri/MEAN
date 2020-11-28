@@ -6,6 +6,7 @@ import { ContactUsComponent } from '../contact-us/contact-us.component';
 import { HomeComponent } from '../home/home.component';
 import { productsComponent } from '../Products.component';
 import { SearchedProductsComponent } from '../searched-products/searched-products.component';
+import { SubproductComponent } from '../subproduct/subproduct.component';
 
 const routes: Routes = [
     {path: 'contacts' , component: ContactUsComponent}
@@ -15,7 +16,8 @@ const routes: Routes = [
     {path:"searchproducts",component:SearchedProductsComponent},
     {path: '' , component: HomeComponent},
     {path: '', redirectTo: 'Home', pathMatch: 'full'},
-    {path: 'Home' , component: HomeComponent}
+    {path: 'Home' , component: HomeComponent},
+    {path: 'subproducts' , component: SubproductComponent}
     
     ];//{path: '' , component: HomeComponent}
 

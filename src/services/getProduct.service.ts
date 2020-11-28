@@ -22,5 +22,10 @@ export class ProductsService {
         console.log(BASE_URL)
          return this.httpservice.get(BASE_URL+"products/category/"+category)
      }
+     public getSubCategoryProducts(subcategory):Observable<any> {
+        console.log("in fashion products")
+        console.log(BASE_URL)
+         return this.httpservice.get(BASE_URL+"products/subcategory/"+subcategory)
+     }
 
 }

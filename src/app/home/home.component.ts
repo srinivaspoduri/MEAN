@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/services/getProduct.service';
-
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   ;
   public records:any=[];
   public showinGrid:any=[];
-  constructor(public productsservice : ProductsService) { }
+  constructor(public productsservice : ProductsService,public route:Router) { }
 
   ngOnInit(): void {
   
@@ -46,8 +46,8 @@ export class HomeComponent implements OnInit {
       for(let i=0;i<4;i++)
       {
         let value = Math.floor(Math.random()*(lengths-1-0) +0);
-        console.log("show in Grid value "+value + " element "+this.records[value].img)
-      this.showinGrid.push(this.records[value].img)
+        console.log("show in Grid value "+value + " element "+this.records[value])
+      this.showinGrid.push(this.records[value])
     }
     console.log("show in Grid"+this.showinGrid)
     }, (errRes) => {
@@ -64,8 +64,8 @@ export class HomeComponent implements OnInit {
       for(let i=0;i<4;i++)
       {
         let value = Math.floor(Math.random()*(lengths-1-0) +0);
-        console.log("show in Grid value "+value + " element "+this.records[value].img)
-      this.showinGrid.push(this.records[value].img)
+        console.log("show in Grid value "+value + " element "+this.records[value])
+      this.showinGrid.push(this.records[value])
     }
     console.log("show in Grid"+this.showinGrid)
     }, (errRes) => {
@@ -82,8 +82,8 @@ export class HomeComponent implements OnInit {
       for(let i=0;i<4;i++)
       {
         let value = Math.floor(Math.random()*(lengths-1-0) +0);
-        console.log("show in Grid value "+value + " element "+this.records[value].img)
-      this.showinGrid.push(this.records[value].img)
+        console.log("show in Grid value "+value + " element "+this.records[value])
+      this.showinGrid.push(this.records[value])
     }
     console.log("show in Grid"+this.showinGrid)
     }, (errRes) => {
@@ -100,8 +100,8 @@ export class HomeComponent implements OnInit {
       for(let i=0;i<4;i++)
       {
         let value = Math.floor(Math.random()*(lengths-1-0) +0);
-        console.log("show in Grid value "+value + " element "+this.records[value].img)
-      this.showinGrid.push(this.records[value].img)
+        console.log("show in Grid value "+value + " element "+this.records[value])
+      this.showinGrid.push(this.records[value])
     }
     console.log("show in Grid"+this.showinGrid)
     }, (errRes) => {
@@ -111,6 +111,12 @@ export class HomeComponent implements OnInit {
     
     
    
+  }
+  LoadSubCategory(showinGrid:any)
+  {
+  //  console.log(searchItem);
+    this.route.navigate(['/subproducts'],{ queryParams: { catagory: `${showinGrid}`} });
+
   }
 
 }
