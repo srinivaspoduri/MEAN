@@ -26,10 +26,11 @@ export class ProductDetailsComponent implements OnInit {
       
       this.ServerData = posRes.products;
       var lengths = this.ServerData.length;
-      for(let i=0;i<4;i++)
+      while(this.showinGrid.length < 8)
       {
         let value = Math.floor(Math.random()*(lengths-1-0) +0);
-        console.log("show in Grid value "+value + " element "+this.ServerData[value])
+        //console.log("show in Grid value "+value + " element "+this.ServerData[value])
+        if(this.showinGrid.indexOf(value) === -1)
       this.showinGrid.push(this.ServerData[value])
     }
     }, (errRes) => {
@@ -47,7 +48,7 @@ export class ProductDetailsComponent implements OnInit {
   
     console.log(Object.values(ProductInfo));
   this.router.navigate(['/productdetails/'], { queryParams: ProductInfo });
-  
+
   this.activeroute.queryParams.subscribe((selectedproductdetails) => {
 
     this.selectedproductdetails = selectedproductdetails;
