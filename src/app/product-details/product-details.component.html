@@ -1,0 +1,25 @@
+<div>
+<div class='row'>
+    <div class='col-lg-4'><img class="mx-auto float-right d-block" src="{{selectedproductdetails.img}}" /></div>
+    <div class='col-lg-4'>
+        <li><b>category</b>: {{ selectedproductdetails.category }}</li>
+        <li><b>subcategory</b>: {{ selectedproductdetails.subcategory }}</li>
+        <li><b>Brand</b>: {{ selectedproductdetails.brand }}</li>
+        <li><b>price</b>: {{ selectedproductdetails.price }}</li>
+        <li><b>Items</b>: {{ selectedproductdetails.items }}</li><br>
+        <b>Description :</b>
+        
+        <p>13MP+2MP dual rear camera with AI beauty, HDR, background blur, sticker, filter | 8MP front facing camera
+            15.748 centimeters (6.2-inch) HD+ IPS multi capacitive touchscreen with 1520 x 720 pixels resolution, 271 ppi pixel density
+            Memory, Storage & SIM: 3GB RAM | 32GB storage expandable up to 256GB | Dual nano SIM with dual standby (4G+4G)</p>
+        <button type="button" class="btn btn-warning float-left">Add to Cart</button>
+        <button type="button" class="btn btn-warning float-right">Save for later</button>
+    </div>
+</div>
+<style>
+ img:hover {
+  
+        transform: scale(1.5);
+        /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }  
+</style>

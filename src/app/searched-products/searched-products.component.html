@@ -1,7 +1,7 @@
 <div style="margin: 100px;">
 <mat-grid-list cols="4"  gutterSize="10px">
     <mat-grid-tile  *ngFor= "let item of SearchResult">
-        <img src="{{item.img}}"/>
+        <img src="{{item.img}}" (click)="ShowDetails(item)" />
         <mat-grid-tile-footer>
             
              <p>  {{item.price | currency:'INR'}} </p>          
@@ -17,10 +17,7 @@
         max-height: 200%;
         max-width: none;
         height: 50%;
+        cursor: pointer;
     }
-img:hover {
-  
-        transform: scale(1.5);
-        /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    }
+
 </style>
