@@ -7,9 +7,11 @@
         <button type="button" (click)="search(searchText)">Search</button> -->
         <div class="input-group">
 
-            <input type="text" class="form-control" name="search" [(ngModel)]="searchText" placeholder="Search Products....">
+            <input type="text" class="form-control" name="search" [(ngModel)]="searchText" 
+            (keyup.enter)="search(searchText)" placeholder="Search Products....">
             <div class="input-group-append">
-              <button class="btn btn-secondary btn btn-warning" type="button" (click)="search(searchText)">
+              <button class="btn btn-secondary btn btn-warning" type="button" 
+               (click)="search(searchText)">
                 <i class="fa fa-search"></i>
               </button>
             </div>
