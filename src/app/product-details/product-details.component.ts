@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 import { ProductsService } from 'src/services/getProduct.service';
 @Component({
   selector: 'app-product-details',
@@ -9,7 +9,7 @@ import { ProductsService } from 'src/services/getProduct.service';
 export class ProductDetailsComponent implements OnInit {
   public ServerData: any;
   public showinGrid:any=[];
-  constructor(public activeroute: ActivatedRoute, public productsservice: ProductsService) { }
+  constructor(public activeroute: ActivatedRoute, public productsservice: ProductsService, public router:Router) { }
   public selectedproductdetails: any;
   ngOnInit(): void {
 
@@ -42,5 +42,18 @@ export class ProductDetailsComponent implements OnInit {
 
 
   }
+  ShowDetails(ProductInfo:any) {
+    //console.log("products component"+ProductInfo.img)
+  
+    console.log(Object.values(ProductInfo));
+  this.router.navigate(['/productdetails/'], { queryParams: ProductInfo });
+  
+  this.activeroute.queryParams.subscribe((selectedproductdetails) => {
+
+    this.selectedproductdetails = selectedproductdetails;
+    console.log("****" + selectedproductdetails);
+  })
+  }
+  
   
 }

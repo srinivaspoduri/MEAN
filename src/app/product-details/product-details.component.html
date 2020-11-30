@@ -17,10 +17,10 @@
     </div>
     <div class='col-lg-4'>
         <h1>View Simillar products</h1>
-        <img class="img-thumbnail"  src="{{showinGrid[0].img}}" />
-        <img class="img-thumbnail"   src="{{showinGrid[1].img}}" />
-        <img class="img-thumbnail"   src="{{showinGrid[2].img}}" />
-        <img class="img-thumbnail"  src="{{showinGrid[3].img}}" />
+        <img class="img-thumbnail"  src="{{showinGrid[0].img}}" (click)="ShowDetails(showinGrid[0])" />
+        <img class="img-thumbnail"   src="{{showinGrid[1].img}}" (click)="ShowDetails(showinGrid[1])" />
+        <img class="img-thumbnail"   src="{{showinGrid[2].img}}" (click)="ShowDetails(showinGrid[2])" />
+        <img class="img-thumbnail"  src="{{showinGrid[3].img}}" (click)="ShowDetails(showinGrid[3])"/>
     </div>
 </div>
 <style>
