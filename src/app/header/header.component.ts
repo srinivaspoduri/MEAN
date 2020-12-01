@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { SelectedProductService } from 'src/services/SelectedProduct.service';
 
 
 @Component({
@@ -10,9 +11,12 @@ import {Router} from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   public searchText="";
-  constructor(public route:Router) { }
+  public  cartcount:number;
+  constructor(public route:Router,public selectedprosrvc:SelectedProductService) { }
 
   ngOnInit(): void {
+    this.cartcount= this.selectedprosrvc.get_items_count();
+    console.log("in ngint of header"+this.cartcount)
   }
   search(searchItem:any){
     console.log(searchItem);

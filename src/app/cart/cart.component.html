@@ -1,1 +1,26 @@
 <h1>Shopping Cart  Soon....!</h1>
+<button  mat-button color="warn" (click)="ClearCart()" style="float: right;">Clear Cart</button>
+<mat-grid-list cols="2" rowHeight="35vh" *ngFor="let x of items">
+    <mat-grid-tile><img src="{{x.img}}" (click)="ShowDetails(x)"/>
+        <mat-grid-tile-footer>
+            
+            <p>  {{x.price | currency:'INR'}} </p>          
+                
+       </mat-grid-tile-footer></mat-grid-tile>
+    
+</mat-grid-list>
+    
+    <style>
+        img {
+            max-height: 200%;
+            max-width: none;
+            height: 50%;
+            cursor: pointer;
+        }
+        mat-grid-tile,
+    mat-grid-list {
+
+        width: 50%;
+    }
+    
+    </style>
