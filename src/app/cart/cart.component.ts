@@ -15,6 +15,18 @@ items:any[];
   
     this.items= this.selectedproservice.get_items();
     console.log('in cart component'+this.items)
+    for(var i = 0; i < this.items.length; i++) {
+      var obj = this.items[i];
+      if(Object.keys(obj).indexOf("Quantity") === -1)
+      {
+        this.items[i].Quantity =1;
+      }
+      else
+      {
+        this.items[i].Quantity = this.items[i].Quantity +1;
+      }
+  
+       }
   }
   ClearCart()
   {
