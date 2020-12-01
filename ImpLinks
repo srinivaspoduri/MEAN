@@ -25,3 +25,12 @@ https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/
 
 Input-Output
 https://ultimatecourses.com/blog/bootstrap-angular-2-hello-world
+
+Git:
+https://stackoverflow.com/questions/448919/how-can-i-remove-a-commit-on-github
+
+let x = document.getElementsByClassName("s-image")
+for(var i=0;i<x.length;i++)
+{
+    console.log("id:"+i +"\n"+" category:Mobile"  +"\n"+" subcategory:Android"  +"\n"+" brand:OnePlus"  +"\n"+" price:"+"25000"+i +"\n"+" items:"+"25"+i +"\n"+" img:"+x[i].src);
+}
