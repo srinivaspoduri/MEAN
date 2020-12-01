@@ -86,8 +86,6 @@
         right: 0;
     }
 </style>
-
-
 <div id='displaygrid' style="display: block; ">
     <mat-grid-list cols="2" rowHeight="35vh" *ngFor="let x of records">
         <mat-grid-tile><img src="{{x.img}}" (click)="ShowDetails(x)"/></mat-grid-tile>
