@@ -9,7 +9,29 @@ export class CartComponent implements OnInit {
 
   constructor() { }
 
+<<<<<<< HEAD
   ngOnInit(): void {
+=======
+  
+    this.items= this.selectedproservice.get_items();
+    console.log('in cart component'+this.items)
+    for(var i = 0; i < this.items.length; i++) {
+      var obj = this.items[i];
+      if(Object.keys(obj).indexOf("Quantity") === -1)
+      {
+        this.items[i].Quantity =1;
+      }
+      else
+      {
+        this.items[i].Quantity = this.items[i].Quantity +1;
+      }
+  
+       }
+  }
+  ClearCart()
+  {
+    this.selectedproservice.clear_cart();
+>>>>>>> cc6fbb1a07b4ad8d7621ef0eca1b821578a034bc
   }
 
 }
