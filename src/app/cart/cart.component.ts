@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SelectedProductService } from 'src/services/SelectedProduct.service';
 
 @Component({
   selector: 'app-cart',
@@ -7,11 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  constructor() { }
-
-<<<<<<< HEAD
+  constructor(public selectedproservice :SelectedProductService) { }
+items:any[];
   ngOnInit(): void {
-=======
   
     this.items= this.selectedproservice.get_items();
     console.log('in cart component'+this.items)
@@ -31,7 +30,6 @@ export class CartComponent implements OnInit {
   ClearCart()
   {
     this.selectedproservice.clear_cart();
->>>>>>> cc6fbb1a07b4ad8d7621ef0eca1b821578a034bc
   }
 
 }
