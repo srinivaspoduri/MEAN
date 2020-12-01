@@ -34,3 +34,4 @@ for(var i=0;i<x.length;i++)
 {
     console.log("id:"+i +"\n"+" category:Mobile"  +"\n"+" subcategory:Android"  +"\n"+" brand:OnePlus"  +"\n"+" price:"+"25000"+i +"\n"+" items:"+"25"+i +"\n"+" img:"+x[i].src);
 }
+https://www.digitalocean.com/community/tutorials/js-introduction-localstorage-sessionstorage
