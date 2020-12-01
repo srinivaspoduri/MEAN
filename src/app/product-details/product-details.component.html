@@ -1,0 +1,61 @@
+<div>
+    <div class='row'>
+        <div class='col-lg-4'><img class="mx-auto float-right d-block" src="{{selectedproductdetails.img}}" /></div>
+        <div class='col-lg-4'>
+            <p class="font-weight-bolder h3">{{ selectedproductdetails.brand }} {{ selectedproductdetails.subcategory }} {{ selectedproductdetails.category }}</p>
+            <li><b>category</b>: {{ selectedproductdetails.category }}</li>
+            <li><b>subcategory</b>: {{ selectedproductdetails.subcategory }}</li>
+            <li><b>Brand</b>: {{ selectedproductdetails.brand }}</li>
+            <li><b>price</b>: {{ selectedproductdetails.price }}</li>
+            <li><b>Items</b>: {{ selectedproductdetails.items }}</li><br>
+            <b>Description :</b>
+
+            <p>13MP+2MP dual rear camera with AI beauty, HDR, background blur, sticker, filter | 8MP front facing camera
+                15.748 centimeters (6.2-inch) HD+ IPS multi capacitive touchscreen with 1520 x 720 pixels resolution,
+                271 ppi pixel density
+                Memory, Storage & SIM: 3GB RAM | 32GB storage expandable up to 256GB | Dual nano SIM with dual standby
+                (4G+4G)</p>
+            <button type="button" class="btn btn-warning float-left">Add to Cart</button>
+            <button type="button" class="btn btn-warning float-right">Save for later</button>
+        </div>
+        <!-- <div class='col-lg-4'>
+        <h1>View Simillar products</h1>
+        <img class="img-thumbnail"  src="{{showinGrid[0].img}}" (click)="ShowDetails(showinGrid[0])" />
+        <img class="img-thumbnail"   src="{{showinGrid[1].img}}" (click)="ShowDetails(showinGrid[1])" />
+        <img class="img-thumbnail"   src="{{showinGrid[2].img}}" (click)="ShowDetails(showinGrid[2])" />
+        <img class="img-thumbnail"  src="{{showinGrid[3].img}}" (click)="ShowDetails(showinGrid[3])"/>
+    </div> -->
+        <div class='col-lg-4'>
+            <p class="font-weight-bolder">View Simillar Products</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img class="img-thumbnail" src="{{showinGrid[0].img}}" (click)="ShowDetails(showinGrid[0])" />
+                    </div>
+                    <div class="col-sm-4">
+                        <img class="img-thumbnail" src="{{showinGrid[1].img}}" (click)="ShowDetails(showinGrid[1])" />
+                    </div>
+                </div><br><br>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img class="img-thumbnail" src="{{showinGrid[2].img}}" (click)="ShowDetails(showinGrid[2])" />
+                        </div>
+                        <div class="col-sm-4">
+                            <img class="img-thumbnail" src="{{showinGrid[3].img}}" (click)="ShowDetails(showinGrid[3])" />
+                        </div>
+
+                    </div>
+                
+            </div>
+        </div>
+
+        <style>
+            img {
+                cursor: pointer;
+            }
+
+            .img-thumbnail {
+
+                width: 75px
+            }
+        </style>

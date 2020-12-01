@@ -1,12 +1,12 @@
 <div id='displaygrid' style="display: block; ">
     <mat-grid-list cols="2" rowHeight="35vh" *ngFor="let x of ServerData">
-        <mat-grid-tile><img src="{{x.img}}" /></mat-grid-tile>
+        <mat-grid-tile><img src="{{x.img}}" (click)="ShowDetails(x)" /></mat-grid-tile>
         <mat-grid-tile>
             <ul style="list-style-type:none;">
                 <li><b>category</b>: {{ x.category }}</li>
                 <li><b>subcategory</b>: {{ x.subcategory }}</li>
                 <li><b>Brand</b>: {{ x.brand }}</li>
-                <li><b>price</b>: {{ x.price }}</li>
+                <li><b>price in RS</b>: {{ x.price }}</li>
                 <li><b>Items</b>: {{ x.items }}</li>
                 <li><b>Product ID #</b>: {{ x.id }}</li>
             </ul>

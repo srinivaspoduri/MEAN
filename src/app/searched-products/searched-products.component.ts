@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 import { ProductsService } from 'src/services/getProduct.service';
 
 
@@ -13,7 +13,7 @@ export class SearchedProductsComponent implements OnInit {
   public catagory:any;
   public SearchResult:any;
   public allProducts:any[];
-  constructor(private route: ActivatedRoute,public productsservice:ProductsService)
+  constructor(private route: ActivatedRoute,public productsservice:ProductsService, private router:Router)
      { }
 
   ngOnInit():void {
@@ -30,6 +30,12 @@ export class SearchedProductsComponent implements OnInit {
         })
 
     })
+  }
+  ShowDetails(ProductInfo:any) {
+    //console.log("products component"+ProductInfo.img)
+  
+    console.log(Object.values(ProductInfo));
+  this.router.navigate(['/productdetails/'], { queryParams: ProductInfo });
   }
 
 }

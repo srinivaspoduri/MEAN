@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 import { ProductsService } from 'src/services/getProduct.service';
 @Component({
   selector: 'app-subproduct',
@@ -10,7 +10,7 @@ export class SubproductComponent implements OnInit {
 
   
   public ServerData:any;
-  constructor(public route:ActivatedRoute,public productsservice: ProductsService) { }
+  constructor(public route:ActivatedRoute,public productsservice: ProductsService,private router:Router) { }
 
   ngOnInit(): void {
 
@@ -28,5 +28,11 @@ export class SubproductComponent implements OnInit {
   });
 
 
+}
+ShowDetails(ProductInfo:any) {
+  //console.log("products component"+ProductInfo.img)
+
+  console.log(Object.values(ProductInfo));
+this.router.navigate(['/productdetails/'], { queryParams: ProductInfo });
 }
 }

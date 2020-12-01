@@ -30,13 +30,14 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { SearchedProductsComponent } from './searched-products/searched-products.component';
 import { SubproductComponent } from './subproduct/subproduct.component';
 import { SpacePipe } from './pipes/currencypipe';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 //https://www.smashingmagazine.com/2018/11/a-complete-guide-to-routing-in-angular/
 //https://therichpost.com/angular-9-material-carousel-slider/
 @NgModule({
   declarations: [
     AppComponent
     ,productsComponent, HeaderComponent, FooterComponent, CartComponent, AccountComponent, HomeComponent,SearchedProductsComponent, SubproductComponent
-    ,SpacePipe ],
+    ,SpacePipe, ProductDetailsComponent ],
   imports: [
     MatTableModule,MatButtonModule,MatToolbarModule,
     MatTooltipModule,NgbModule,MatInputModule,ReactiveFormsModule,

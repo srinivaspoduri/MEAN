@@ -86,11 +86,9 @@
         right: 0;
     }
 </style>
-
-
 <div id='displaygrid' style="display: block; ">
     <mat-grid-list cols="2" rowHeight="35vh" *ngFor="let x of records">
-        <mat-grid-tile><img src="{{x.img}}" /></mat-grid-tile>
+        <mat-grid-tile><img src="{{x.img}}" (click)="ShowDetails(x)"/></mat-grid-tile>
         <mat-grid-tile>
             <ul style="list-style-type:none;">
                 <li><b>category</b>: {{ x.category }}</li>
@@ -175,9 +173,14 @@
     }
     img {
         max-height: 200%;
-        height: 60%;
+        height: 50%;
         max-width: none;
     }
+    img:hover{
+
+ cursor: pointer;
+
+}
     div, mat-grid-list{
         align-content: center;
     }

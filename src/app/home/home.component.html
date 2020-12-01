@@ -6,131 +6,99 @@
             </div>
         </ng-template>
     </ngb-carousel>
-    <div fxLayout="row" style="display:flex; flex-direction: row;  padding: 16px; width: 100%;">
-        <div>
-            <mat-card style=" width: 300px;">
-                <h1>Top picks for your home</h1>
-                <mat-grid-list cols="2" >
-                    <mat-grid-tile><img src="{{showinGrid[0].img}}" (click)="LoadSubCategory(showinGrid[0].subcategory)" /><mat-grid-tile-footer>{{showinGrid[0].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[1].img}}" (click)="LoadSubCategory(showinGrid[1].subcategory)"/><mat-grid-tile-footer>{{showinGrid[1].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[2].img}}" (click)="LoadSubCategory(showinGrid[2].subcategory)"/><mat-grid-tile-footer>{{showinGrid[2].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[3].img}}" (click)="LoadSubCategory(showinGrid[3].subcategory)"/><mat-grid-tile-footer>{{showinGrid[3].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
 
-                </mat-grid-list>
-                <button mat-button color="warn" style="float: right;"><a [routerLink]="'/products'">View
-                        More...</a></button>
-                        
-            </mat-card>
-        </div>
-
-        <div>
-            <mat-card style=" width: 300px;">
-                <h1>Top picks from Fashion</h1>
-                <mat-grid-list cols="2">
-                    <mat-grid-tile><img src="{{showinGrid[4].img}}" (click)="LoadSubCategory(showinGrid[4].subcategory)" /><mat-grid-tile-footer>{{showinGrid[4].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[5].img}}" (click)="LoadSubCategory(showinGrid[5].subcategory)"/><mat-grid-tile-footer>{{showinGrid[5].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[6].img}}" (click)="LoadSubCategory(showinGrid[6].subcategory)"/><mat-grid-tile-footer>{{showinGrid[6].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[7].img}}" (click)="LoadSubCategory(showinGrid[7].subcategory)"/><mat-grid-tile-footer>{{showinGrid[7].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-
-                </mat-grid-list>
-                <button mat-button color="warn" style="float: right;"><a [routerLink]="'/products'">View
-                        More...</a></button>
-            </mat-card>
-        </div>
-
-        <div>
-            <mat-card style=" width: 300px;">
-                <h1>Top picks from Mobile</h1>
-                <mat-grid-list cols="2">
-                    <mat-grid-tile><img src="{{showinGrid[8].img}}" (click)="LoadSubCategory(showinGrid[8].subcategory)"/><mat-grid-tile-footer>{{showinGrid[8].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[9].img}}" (click)="LoadSubCategory(showinGrid[9].subcategory)"/><mat-grid-tile-footer>{{showinGrid[9].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[10].img}}" (click)="LoadSubCategory(showinGrid[10].subcategory)"/><mat-grid-tile-footer>{{showinGrid[10].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[11].img}}" (click)="LoadSubCategory(showinGrid[11].subcategory)"/><mat-grid-tile-footer>{{showinGrid[11].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-
-                </mat-grid-list>
-                <button mat-button color="warn" style="float: right;"><a [routerLink]="'/products'">View
-                        More...</a></button>
-            </mat-card>
-        </div>
-
-        <div>
-            <mat-card style=" width: 300px;">
-                <h1>Top picks from Laptops</h1>
-                <mat-grid-list cols="2">
-                    <mat-grid-tile><img src="{{showinGrid[12].img}}" (click)="LoadSubCategory(showinGrid[12].subcategory)"/><mat-grid-tile-footer>{{showinGrid[12].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[13].img}}"(click)="LoadSubCategory(showinGrid[13].subcategory)" /><mat-grid-tile-footer>{{showinGrid[13].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[14].img}}" (click)="LoadSubCategory(showinGrid[14].subcategory)"/><mat-grid-tile-footer>{{showinGrid[14].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[15].img}}" (click)="LoadSubCategory(showinGrid[15].subcategory)"/><mat-grid-tile-footer>{{showinGrid[15].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-
-                </mat-grid-list>
-                <button mat-button color="warn" style="float: right;"><a [routerLink]="'/products'">View
-                        More...</a></button>
-            </mat-card>
+    <div class='container'>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="container">
+                        <p class="font-weight-bolder h6">Top picks from Home</p>
+                        <div class="row">
+                            <div class="col"><img src="{{showinGrid[0].img}}"
+                                    (click)="LoadSubCategory(showinGrid[0].subcategory)" />{{showinGrid[0].subcategory}}
+                            </div>
+                            <div class="col"><img src="{{showinGrid[1].img}}"
+                                    (click)="LoadSubCategory(showinGrid[1].subcategory)" />{{showinGrid[1].subcategory}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><img src="{{showinGrid[2].img}}"
+                                    (click)="LoadSubCategory(showinGrid[2].subcategory)" />{{showinGrid[2].subcategory}}
+                            </div>
+                            <div class="col"><img src="{{showinGrid[3].img}}"
+                                    (click)="LoadSubCategory(showinGrid[3].subcategory)" />{{showinGrid[3].subcategory}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card"><div class="container">
+                    <p class="font-weight-bolder h6">Top picks from Home</p>
+                    <div class="row">
+                        <div class="col"><img src="{{showinGrid[4].img}}"
+                                (click)="LoadSubCategory(showinGrid[4].subcategory)" />{{showinGrid[4].subcategory}}
+                        </div>
+                        <div class="col"><img src="{{showinGrid[5].img}}"
+                                (click)="LoadSubCategory(showinGrid[5].subcategory)" />{{showinGrid[5].subcategory}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><img src="{{showinGrid[6].img}}"
+                                (click)="LoadSubCategory(showinGrid[6].subcategory)" />{{showinGrid[6].subcategory}}
+                        </div>
+                        <div class="col"><img src="{{showinGrid[7].img}}"
+                                (click)="LoadSubCategory(showinGrid[7].subcategory)" />{{showinGrid[7].subcategory}}
+                        </div>
+                    </div>
+                </div></div>
+            </div>
+            <div class="col">
+                <div class="card"><div class="container">
+                    <p class="font-weight-bolder h6">Top picks from Home</p>
+                    <div class="row">
+                        <div class="col"><img src="{{showinGrid[8].img}}"
+                                (click)="LoadSubCategory(showinGrid[8].subcategory)" />{{showinGrid[8].subcategory}}
+                        </div>
+                        <div class="col"><img src="{{showinGrid[9].img}}"
+                                (click)="LoadSubCategory(showinGrid[9].subcategory)" />{{showinGrid[9].subcategory}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><img src="{{showinGrid[10].img}}"
+                                (click)="LoadSubCategory(showinGrid[10].subcategory)" />{{showinGrid[10].subcategory}}
+                        </div>
+                        <div class="col"><img src="{{showinGrid[11].img}}"
+                                (click)="LoadSubCategory(showinGrid[11].subcategory)" />{{showinGrid[11].subcategory}}
+                        </div>
+                    </div>
+                </div></div>
+            </div>
+            <div class="col">
+                <div class="card"><div class="container">
+                    <p class="font-weight-bolder h6">Top picks from Home</p>
+                    <div class="row">
+                        <div class="col"><img src="{{showinGrid[12].img}}"
+                                (click)="LoadSubCategory(showinGrid[12].subcategory)" />{{showinGrid[12].subcategory}}
+                        </div>
+                        <div class="col"><img src="{{showinGrid[13].img}}"
+                                (click)="LoadSubCategory(showinGrid[13].subcategory)" />{{showinGrid[13].subcategory}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><img src="{{showinGrid[14].img}}"
+                                (click)="LoadSubCategory(showinGrid[14].subcategory)" />{{showinGrid[14].subcategory}}
+                        </div>
+                        <div class="col"><img src="{{showinGrid[15].img}}"
+                                (click)="LoadSubCategory(showinGrid[15].subcategory)" />{{showinGrid[15].subcategory}}
+                        </div>
+                    </div>
+                </div></div>
+            </div>
         </div>
     </div>
 
-    <div fxLayout="row" style="display:flex; flex-direction: row;  padding: 16px;width: 100%;">
-        <div>
-            <mat-card style=" width: 300px;">
-                <h1>Top picks for your home</h1>
-                <mat-grid-list cols="2">
-                    <mat-grid-tile><img src="{{showinGrid[0].img}}" (click)="LoadSubCategory(showinGrid[0].subcategory)" /><mat-grid-tile-footer>{{showinGrid[0].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[1].img}}" (click)="LoadSubCategory(showinGrid[1].subcategory)"/><mat-grid-tile-footer>{{showinGrid[1].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[2].img}}" (click)="LoadSubCategory(showinGrid[2].subcategory)"/><mat-grid-tile-footer>{{showinGrid[2].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[3].img}}" (click)="LoadSubCategory(showinGrid[3].subcategory)"/><mat-grid-tile-footer>{{showinGrid[3].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
 
-                </mat-grid-list>
-                <button mat-button color="warn" style="float: right;" (click)="LoadSubCategory(showinGrid)"><a>View
-                        More...</a></button>
-                        
-            </mat-card>
-        </div>
-
-        <div>
-            <mat-card style=" width: 300px;">
-                <h1>Top picks from Fashion</h1>
-                <mat-grid-list cols="2">
-                    <mat-grid-tile><img src="{{showinGrid[4].img}}" (click)="LoadSubCategory(showinGrid[4].subcategory)"/><mat-grid-tile-footer>{{showinGrid[4].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[5].img}}" (click)="LoadSubCategory(showinGrid[5].subcategory)"/><mat-grid-tile-footer>{{showinGrid[5].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[6].img}}"(click)="LoadSubCategory(showinGrid[6].subcategory)" /><mat-grid-tile-footer>{{showinGrid[6].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[7].img}}"(click)="LoadSubCategory(showinGrid[7].subcategory)" /><mat-grid-tile-footer>{{showinGrid[7].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-
-                </mat-grid-list>
-                <button mat-button color="warn" style="float: right;"><a [routerLink]="'/products'">View
-                        More...</a></button>
-            </mat-card>
-        </div>
-
-        <div>
-            <mat-card style=" width: 300px;">
-                <h1>Top picks from Mobile</h1>
-                <mat-grid-list cols="2">
-                    <mat-grid-tile><img src="{{showinGrid[8].img}}" (click)="LoadSubCategory(showinGrid[8].subcategory)"/><mat-grid-tile-footer>{{showinGrid[8].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[9].img}}" (click)="LoadSubCategory(showinGrid[9].subcategory)"/><mat-grid-tile-footer>{{showinGrid[9].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[10].img}}" (click)="LoadSubCategory(showinGrid[10].subcategory)"/><mat-grid-tile-footer>{{showinGrid[10].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[11].img}}" (click)="LoadSubCategory(showinGrid[11].subcategory)"/><mat-grid-tile-footer>{{showinGrid[11].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-
-                </mat-grid-list>
-                <button mat-button color="warn" style="float: right;"><a [routerLink]="'/products'">View
-                        More...</a></button>
-            </mat-card>
-        </div>
-
-        <div>
-            <mat-card style=" width: 300px;">
-                <h1>Top picks from Laptops</h1>
-                <mat-grid-list cols="2">
-                    <mat-grid-tile><img src="{{showinGrid[12].img}}" (click)="LoadSubCategory(showinGrid[12].subcategory)"/><mat-grid-tile-footer>{{showinGrid[12].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[13].img}}" (click)="LoadSubCategory(showinGrid[13].subcategory)"/><mat-grid-tile-footer>{{showinGrid[13].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[14].img}}"(click)="LoadSubCategory(showinGrid[14].subcategory)" /><mat-grid-tile-footer>{{showinGrid[14].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-                    <mat-grid-tile><img src="{{showinGrid[15].img}}" (click)="LoadSubCategory(showinGrid[15].subcategory)"/><mat-grid-tile-footer>{{showinGrid[15].subcategory}}</mat-grid-tile-footer></mat-grid-tile>
-
-                </mat-grid-list>
-                <button mat-button color="warn" style="float: right;"><a [routerLink]="'/products'">View
-                        More...</a></button>
-            </mat-card>
-        </div>
-           </div>
     <div fxLayout="row" style="display:flex; flex-direction: row;  padding: 16px; width: 100%;">
         <div>
             <h1>Todays Deals</h1>
@@ -138,23 +106,19 @@
     </div>
 </div>
 <style>
-    mat-grid-tile {
-        border: 5px;
-        border-style: ridge;
-        width: "25px";
-        height: "25px";
-        border-color: rgb(248, 243, 243);
+    .row .col .card {
+        overflow: hidden;
 
     }
 
     img {
-        max-height: 200%;
-        height: 50%;
-        max-width: none;
+        border: hidden;
+        content: icon;
+        max-width: 100%;
+        width: none;
+        overflow: hidden;
+        cursor: pointer;
+
+
     }
-    mat-grid-tile-footer:hover
-    {
-        display: none;
-    }
-  
 </style>
