@@ -1,0 +1,68 @@
+<mat-toolbar style="background-color:black;">
+    <mat-toolbar-row>
+        <button mat-button color="warn"><mat-icon>home</mat-icon><a [routerLink]="'/Home'">Home</a></button>
+        <span style="flex: 1 1 auto;"></span>
+        
+        <!-- <input type="text" name="search" [(ngModel)]="searchText" placeholder="Search...." style="width: 20%;">
+        <button type="button" (click)="search(searchText)">Search</button> -->
+        <div class="input-group">
+
+            <input type="text" class="form-control" name="search" [(ngModel)]="searchText" 
+            (keyup.enter)="search(searchText)" placeholder="Search Products....">
+            <div class="input-group-append">
+              <button class="btn btn-secondary btn btn-warning" type="button" 
+               (click)="search(searchText)">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+            
+          </div>
+        <!-- <span style="flex: 1 1 auto;"></span> -->
+        
+        <button  mat-button color="warn"><mat-icon>account_box</mat-icon><a [routerLink]="'/account'">Account</a></button>
+        <button  mat-button color="warn"><mat-icon>add_shopping_cart</mat-icon><a [routerLink]="'/cart'">Cart</a></button>
+        
+    </mat-toolbar-row>
+</mat-toolbar>
+<div style="margin: 20px ;background-color: black;">
+    <button mat-button color="accent" (click)="CategoryProducts('Fashion')">Fashion</button>
+    <button mat-button color="primary" (click)="CategoryProducts('HomeApp')">Home Appliances</button>
+    <button mat-button color="accent" (click)="CategoryProducts('Mobile')">Mobile</button>
+    <button mat-button color="primary" (click)="CategoryProducts('Laptops')">Laptops</button>
+    <button mat-button color="accent" (click)="CategoryProducts('Jewellery')">Jewellery</button>
+    <button mat-button color="primary" (click)="CategoryProducts('Cameras')">Cameras</button>
+    <button mat-mini-fab color="primary" (click)="ShowTable()">
+        <mat-icon>table_chart</mat-icon>
+    </button>
+    <button mat-mini-fab color="primary" (click)="displaygrid()">
+        <mat-icon>grid_on</mat-icon>
+    </button>
+</div>
+
+<style>
+     button {
+        margin-right: 50px
+    }
+</style>
+  
+    <!-- <mat-toolbar-row color="warn">
+      <span>Second Line</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+    </mat-toolbar-row> -->
+  
+
+    <!-- <div> -->
+        
+        
+    
+    
+        <!-- <div>
+            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1QSqfRaBcrwcOxMrM7jNrX7THu0mfBQyITw&usqp=CAU'
+                style="width: 100px;" />
+            <mat-form-field class="example-form-field">
+                <mat-label>Enter product details</mat-label>
+                <input matInput type="text">
+            </mat-form-field>
+        </div> -->
+   

@@ -1,0 +1,22 @@
+/* .mat-grid-tile-footer {
+    background-color: #ffffff;
+    color:maroon;
+    font-weight: bold;
+    font-size: large;
+    
+  } */
+  /* img {
+    max-height: 200%;
+    max-width: none;
+    height: 50%;
+    
+} */
+
+.desc{
+  font-size: medium;
+}
+.price{
+   color:maroon;
+    font-weight: bold;
+    font-size: medium;
+}
