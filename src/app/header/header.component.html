@@ -14,7 +14,7 @@
              <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
                 <mat-option *ngFor="let option of filteredOptions | async" [value]="option.subcategory"
                 style="font-size:small;">
-                 subcategory {{option.subcategory}}
+                 {{option.subcategory}} {{option.category}} 
                 </mat-option>
               </mat-autocomplete>
             <div class="input-group-append">

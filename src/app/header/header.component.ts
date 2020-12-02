@@ -48,12 +48,12 @@ export class HeaderComponent implements OnInit {
     console.log("filtered options:"+this.filteredOptions);
   }
   private _filter(value: string): string[] {
-    const filterValue = value;
+    const filterValue = value.toLowerCase();
      console.log("In FIlter Function"+filterValue);
     // // var lengths = this.records.length;      
     // // console.log(lengths);
     // console.log("$$$$$"+this.getRecords());
-    return this.records.filter(option => option.subcategory.includes(filterValue));
+    return this.records.filter(option => option.subcategory.toLowerCase().includes(filterValue));
   }
   displayFn(value) {
     return value;
