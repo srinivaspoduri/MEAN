@@ -30,6 +30,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { SearchedProductsComponent } from './searched-products/searched-products.component';
 import { SubproductComponent } from './subproduct/subproduct.component';
 import { SpacePipe } from './pipes/currencypipe';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 //https://www.smashingmagazine.com/2018/11/a-complete-guide-to-routing-in-angular/
 //https://therichpost.com/angular-9-material-carousel-slider/
@@ -39,7 +40,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     ,productsComponent, HeaderComponent, FooterComponent, CartComponent, AccountComponent, HomeComponent,SearchedProductsComponent, SubproductComponent
     ,SpacePipe, ProductDetailsComponent ],
   imports: [
-    MatTableModule,MatButtonModule,MatToolbarModule,
+    MatTableModule,MatButtonModule,MatToolbarModule,MatAutocompleteModule,
     MatTooltipModule,NgbModule,MatInputModule,ReactiveFormsModule,
     MatRippleModule,MatIconModule,FormsModule,MatDialogModule,MatGridListModule,MatCardModule,
     MatFormFieldModule,BrowserModule,HttpClientModule,AppRoutingModule,

@@ -5,10 +5,18 @@
         
         <!-- <input type="text" name="search" [(ngModel)]="searchText" placeholder="Search...." style="width: 20%;">
         <button type="button" (click)="search(searchText)">Search</button> -->
+       <form style="width: 100%;"> 
         <div class="input-group">
-
+            
             <input type="text" class="form-control" name="search" [(ngModel)]="searchText" 
-            (keyup.enter)="search(searchText)" placeholder="Search Products....">
+             placeholder="Search Products...." [formControl]= "SearchBox" value="searchText"
+             [matAutocomplete]="auto" (input)="searchItem()">
+             <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option.subcategory"
+                style="font-size:small;">
+                 subcategory {{option.subcategory}}
+                </mat-option>
+              </mat-autocomplete>
             <div class="input-group-append">
               <button class="btn btn-secondary btn btn-warning" type="button" 
                (click)="search(searchText)">
@@ -16,7 +24,9 @@
               </button>
             </div>
             
-          </div>
+            
+                     </div>
+                     </form>
         <!-- <span style="flex: 1 1 auto;"></span> -->
         
         <button  mat-button color="warn"><mat-icon>account_box</mat-icon><a [routerLink]="'/account'">Account</a></button>
