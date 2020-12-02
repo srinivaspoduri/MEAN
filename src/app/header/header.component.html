@@ -10,7 +10,7 @@
             
             <input type="text" class="form-control" name="search" [(ngModel)]="searchText" 
              placeholder="Search Products...." [formControl]= "SearchBox" value="searchText"
-             [matAutocomplete]="auto" (input)="searchItem()">
+             [matAutocomplete]="auto" (input)="searchItem()" (ngModelChange)="search(searchText)">
              <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
                 <mat-option *ngFor="let option of filteredOptions | async" [value]="option.subcategory"
                 style="font-size:small;">
