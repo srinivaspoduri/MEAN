@@ -59,9 +59,11 @@ export class HeaderComponent implements OnInit {
     return value;
   }
   search(searchItem:any){
-    console.log(searchItem);
+    console.log("slkdlskdlskfl"+searchItem);
+    if(searchItem!=""){
+      this.route.navigate(['/searchproducts'],{ queryParams: { catagory: `${searchItem}`} });
+    }
     
-    this.route.navigate(['/searchproducts'],{ queryParams: { catagory: `${searchItem}`} });
 
   }
   
